@@ -10,5 +10,4 @@ while True:
         print('Error on Pin '+str(i))
     else:
         print('Works on '+str(i))
-
-    
+    i=i+1
