@@ -5,7 +5,6 @@ touch.dir(mraa.DIR_IN)
 while True:
   touchButton = int(touch.read())
   if(touchButton == 1):
-  print('On')
+      print('On')
   else:
-  Print('Off')
-  
+      print('Off')
