@@ -1,8 +1,10 @@
 import mraa
 
 print (mraa.getVersion())
-i= 29
+i= 24
 touch = mraa.Gpio(i)
+touch.dir(mraa.DIR_OUT)
+toutch.write(0)
 touch.dir(mraa.DIR_IN)
     while True:
         touchButton = int(touch.read())
