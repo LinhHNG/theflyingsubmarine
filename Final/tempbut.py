@@ -28,7 +28,7 @@ if __name__ == '__main__':
             ardOut = ard.read()
             ardTemp = ardOut.split('__*')
             while ardTemp[0] is not  '_' and not '':
-                input.append(ardTemp[0])
+                input1.append(ardTemp[0])
                 ardOut = ard.read()
                 ardTemp = ardOut.split('__*')
             #while '' in showTemp:
