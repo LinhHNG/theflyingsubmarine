@@ -27,16 +27,17 @@ if __name__ == '__main__':
                     oldState = 0
             ardOut = ard.read()
             ardTemp = ardOut.split('__*')
-            while ardTemp[0] is not  '_' and not '':
+            while ardTemp[0] is not  '_' and not ' ':
                 input1.append(ardTemp[0])
                 ardOut = ard.read()
                 ardTemp = ardOut.split('__*')
+            in1 = ''.join(input1)
             #while '' in showTemp:
                 #showTemp.remove('')
             #Temp = ''.join(showTemp)
-            #Temp = int(Temp)
+            Temp = int(in1)
             #showTemp(Temp)
-            print(input1)
+            print(Temp)
     except KeyboardInterrupt:
         print("CTRL-C!! Exiting...")
 		
