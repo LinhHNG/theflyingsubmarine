@@ -25,10 +25,10 @@ if __name__ == '__main__':
                     oldState = 0
             ardOut = ard.read()
             ardTemp = ardOut.split('__*')
-            while '' in showTemp:
-                showTemp.remove('')
-                Temp = ''.join(showTemp)
-                Temp = int(Temp)
+            #while '' in showTemp:
+                #showTemp.remove('')
+            Temp = ''.join(showTemp)
+            Temp = int(Temp)
             showTemp(Temp)
     except KeyboardInterrupt:
         print("CTRL-C!! Exiting...")
