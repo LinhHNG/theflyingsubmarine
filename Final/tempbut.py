@@ -15,22 +15,28 @@ def showTemp(temp):
 if __name__ == '__main__':
     try:
         while True:
+            input = []
             touchButton = int(touch.read())
             if(oldState == 0):
                 if(touchButton == 1):
                     print('help')
+                    return 0
                     oldState = 1
             else:
                 if(touchButton == 0):
                     oldState = 0
             ardOut = ard.read()
             ardTemp = ardOut.split('__*')
+            while ardTemp[0] is not  '_' and is not '' and is not ' ':
+                input.append(ardTemp[0])
+                ardOut = ard.read()
+                ardTemp = ardOut.split('__*')
             #while '' in showTemp:
                 #showTemp.remove('')
             #Temp = ''.join(showTemp)
             #Temp = int(Temp)
             #showTemp(Temp)
-            print(ardTemp)
+            print(input)
     except KeyboardInterrupt:
         print("CTRL-C!! Exiting...")
 		
