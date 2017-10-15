@@ -9,6 +9,6 @@ while True:
     if(oldState == 0):
         if(touchButton == 1):
             print('On')
-  else:
-      if(touchButton == 1):
-          print('Off')
+    else:
+        if(touchButton == 1):
+            print('Off')
