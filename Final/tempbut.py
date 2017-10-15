@@ -15,7 +15,7 @@ def showTemp(temp):
 if __name__ == '__main__':
     try:
         while True:
-            input = []
+            input1 = []
             touchButton = int(touch.read())
             if(oldState == 0):
                 if(touchButton == 1):
@@ -36,7 +36,7 @@ if __name__ == '__main__':
             #Temp = ''.join(showTemp)
             #Temp = int(Temp)
             #showTemp(Temp)
-            print(input)
+            print(input1)
     except KeyboardInterrupt:
         print("CTRL-C!! Exiting...")
 		
