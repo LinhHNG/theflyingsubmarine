@@ -1,20 +1,35 @@
-import serial
+import serial,mraa
+
+oldState = 0
+print (mraa.getVersion())
+touch = mraa.Gpio(29)
+touch.dir(mraa.DIR_IN)
 
 ard = serial.Serial('/dev/tty96B0', 9600)
 
 
 def showTemp(temp):
-	print(str(temp)+ Degrees)
+	if temp >= 30
+		print('help it is '+str(temp)+ 'Degrees')
 
 if __name__ == '__main__':
 
 	try:
 		while True:
-			ardOut = ard.readline()
-			if ardOut.find("Humidity:") != -1:
-				ardTemp = ardOut.split('__*')[1]
-				showTemp(ardTemp)
+			touchButton = int(touch.read())
+		    if(oldState == 0):
+		        if(touchButton == 1):
+		   			print('help')
+		            oldState = 1
+		    else:
+		        if(touchButton == 0):
+		            oldState = 0
+			ardOut = ard.read()
+			ardTemp = ardOut.split('__*')
+			while '' in showTemp:
+				showTemp.remove('')
+			Temp = ''.join(showTemp)
+			Temp = int(Temp)
+			showTemp(Temp)
 	except KeyboardInterrupt:
-		lcd.setColor(0,0,0)
-		lcd.clear()
 		print("CTRL-C!! Exiting...")
