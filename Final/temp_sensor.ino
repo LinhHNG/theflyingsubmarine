@@ -19,9 +19,9 @@ void loop()
     float temperature = 1.0/(log(R/R0)/B+1/298.15)-273.15; // convert to temperature via datasheet
     int temp = (int)temperature;
 
-    Serial.print("_");
-    Serial.print(temp);
-    Serial.print(" ");
+
+    Serial.println(temp);
+
 
     delay(10);
 }
