@@ -19,13 +19,13 @@ from twilio.rest import Client
 # Your Account SID from twilio.com/console
 account_sid = "ACf724412dff5c571d8ba30128c5aac4e1"
 # Ask me for actual authorisation code
-auth_token  = "bbf9784099ea785af62c00ec3e0fa30b"
+auth_token  = "_____"
 
 
            
 def distresssms():
     message = client.messages.create(
-            to="+4407511469037", 
+            to="______", 
             from_="+441277505957",
             body= "help!!")
     print(message.sid)
