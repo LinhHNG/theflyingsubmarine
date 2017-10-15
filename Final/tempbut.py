@@ -1,4 +1,4 @@
-import serial,mraa
+import serial,mraa,time
 
 oldState = 0
 print (mraa.getVersion())
@@ -20,14 +20,14 @@ if __name__ == '__main__':
             if(oldState == 0):
                 if(touchButton == 1):
                     print('help')
-                    return 0
+                    time.sleep(1)
                     oldState = 1
             else:
                 if(touchButton == 0):
                     oldState = 0
             ardOut = ard.read()
             ardTemp = ardOut.split('__*')
-            while ardTemp[0] is not  '_' and is not '' and is not ' ':
+            while ardTemp[0] is not  '_' and not '':
                 input.append(ardTemp[0])
                 ardOut = ard.read()
                 ardTemp = ardOut.split('__*')
