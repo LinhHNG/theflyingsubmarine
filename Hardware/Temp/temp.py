@@ -33,3 +33,4 @@ if __name__ == '__main__':
 			showTemp(Temp)
 	except KeyboardInterrupt:
 		print("CTRL-C!! Exiting...")
+		
