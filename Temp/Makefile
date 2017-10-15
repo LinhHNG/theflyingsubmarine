@@ -1,3 +1,3 @@
 include /usr/share/arduino/Arduino.mk
 run: upload
-        python temp.py
+        python tempbut.py
