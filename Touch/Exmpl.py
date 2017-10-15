@@ -13,4 +13,4 @@ while True:
     else:
         if(touchButton == 0):
             print('Off')
-            oldState = 1
+            oldState = 0
