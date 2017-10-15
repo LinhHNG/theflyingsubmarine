@@ -28,9 +28,9 @@ if __name__ == '__main__':
             #while '' in showTemp:
                 #showTemp.remove('')
             #Temp = ''.join(showTemp)
-            Temp = int(showTemp)
-            showTemp(Temp)
-            print(Temp)
+            #Temp = int(Temp)
+            #showTemp(Temp)
+            print(ardTemp)
     except KeyboardInterrupt:
         print("CTRL-C!! Exiting...")
 		
