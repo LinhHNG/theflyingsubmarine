@@ -28,7 +28,7 @@ ard = serial.Serial('/dev/tty96B0', 9600)
 def distresssms():
     message = client.messages.create(
             to="_______", 
-            from_="+441277505957",
+            from_="+tek's number,
             body= "help!!")
     print(message.sid)
 def showTemp(temp):
